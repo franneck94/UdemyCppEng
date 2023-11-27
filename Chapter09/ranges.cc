@@ -5,8 +5,11 @@
 #include <vector>
 
 auto print = [](auto const &view) {
-    for (std::cout << "{ "; const auto element : view)
+    std::cout << "{ ";
+    for (const auto element : view)
+    {
         std::cout << element << ' ';
+    }
     std::cout << "} ";
 };
 
@@ -30,7 +33,8 @@ int main()
 
     // Filter, Transform
     auto numbers2 = std::vector<int>{1, 2, 3, 4, 5, 6};
-    auto results2 = numbers2 | std::views::filter([](int n) { return n % 2 == 0; }) |
+    auto results2 = numbers2 |
+                    std::views::filter([](int n) { return n % 2 == 0; }) |
                     std::views::transform([](int n) { return n * 2; });
 
     for (auto v : results2)
