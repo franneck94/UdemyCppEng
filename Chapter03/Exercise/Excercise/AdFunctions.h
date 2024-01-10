@@ -23,7 +23,7 @@ Ad::Types::NeighborVehiclesType init_vehicles();
 namespace Visualize
 {
 
-void print_vehicle(const Ad::Types::VehicleType vehicle);
+void print_vehicle(const Ad::Types::VehicleType &vehicle);
 
 void print_neighbor_vehicles(const Ad::Types::NeighborVehiclesType &vehicles);
 
