@@ -27,6 +27,10 @@ std::int32_t accumulate(Iterator first, Iterator last, std::int32_t init);
 - accumulate
   - Compute the sum of the vector within the range $[first, last)$
 
+Note:
+
+I have implemented the functions that they work not only for vector iterators, but for all std container with begin and end iterators.
+
 ## Main Function
 
 ```cpp
