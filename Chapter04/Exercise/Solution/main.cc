@@ -17,7 +17,7 @@ int main()
     mystd::advance(vector_it, 2);
     std::cout << "advance: " << *vector_it << '\n';
 
-    auto dist = mystd::distance(vector_it, vector.begin());
+    auto dist = mystd::distance(vector.begin(), vector_it);
     std::cout << "distance: " << dist << '\n';
 
     return 0;
