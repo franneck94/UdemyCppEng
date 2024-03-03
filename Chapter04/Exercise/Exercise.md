@@ -22,7 +22,8 @@ It prev(It it, DifferenceType n = 1);
 ```
 
 - advance
-  - Step n-steps to the right (forward) with the iterator
+  - Step n-steps to the right (forward) with the iterator if n is positive
+  - Step n-steps to the left (backward) with the iterator if n is negative
 - distance
   - Compute the distance between two iterators of the same container
 - next
