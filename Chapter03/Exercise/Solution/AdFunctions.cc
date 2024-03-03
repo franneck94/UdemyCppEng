@@ -141,7 +141,7 @@ void print_scene(const VehicleType &ego_vehicle,
     auto center_idx = std::size_t{0};
     auto right_idx = std::size_t{0};
 
-    const auto offset_m = std::uint32_t{20};
+    const auto offset_m = std::int32_t{20};
     const auto view_range_m = static_cast<std::int32_t>(VIEW_RANGE_M);
 
     for (auto i = view_range_m; i >= -view_range_m; i -= offset_m)
