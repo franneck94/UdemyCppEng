@@ -5,7 +5,7 @@
 #include "AdConstants.h"
 #include "AdFunctions.h"
 
-namespace Add
+namespace Ad
 {
 namespace Visualize
 {
