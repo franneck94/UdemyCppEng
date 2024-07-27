@@ -15,8 +15,8 @@ constexpr std::uint64_t faculty(const std::uint8_t n)
 
 int main()
 {
-    // const - run time only (only for integers may be compile time)
-    // constexpr (c++17) - compile and run time
+    // const - run time only - variable cant be changed after declaration/init
+    // constexpr (c++17) - compile and run time - varaible also cant be changed
 
     const auto value1 = faculty(5);
     constexpr auto value2 = faculty(5);
