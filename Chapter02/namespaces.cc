@@ -1,20 +1,5 @@
 #include <iostream>
 
-namespace // anonymous
-{
-constexpr std::uint64_t faculty(const std::uint8_t n)
-{
-    auto result = std::uint64_t{1};
-
-    for (std::uint8_t i = 1; i <= n; i++)
-    {
-        result *= i;
-    }
-
-    return result;
-}
-} // namespace
-
 namespace MyStd
 {
 enum class Status

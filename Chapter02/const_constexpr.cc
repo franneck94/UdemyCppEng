@@ -19,7 +19,7 @@ int main()
     // constexpr (c++17) - compile and run time
 
     const auto value1 = faculty(5);
-    constexpr static auto value2 = faculty(5);
+    constexpr auto value2 = faculty(5);
 
     return 0;
 }
