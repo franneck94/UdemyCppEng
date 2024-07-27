@@ -1,6 +1,7 @@
 #include <iostream>
 
-// Input Only Params: Const
+// const: read only input
+// constexpr: const +
 constexpr std::uint64_t faculty(const std::uint8_t n)
 {
     auto result = std::uint64_t{1};
@@ -15,11 +16,8 @@ constexpr std::uint64_t faculty(const std::uint8_t n)
 
 int main()
 {
-    // const - run time only - variable cant be changed after declaration/init
-    // constexpr (c++17) - compile and run time - varaible also cant be changed
-
-    const auto value1 = faculty(5);
-    constexpr auto value2 = faculty(5);
+    const auto result1 = faculty(5); // computed at run time
+    constexpr auto var = faculty(5); // computed at compile time
 
     return 0;
 }
