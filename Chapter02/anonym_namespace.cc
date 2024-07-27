@@ -1,5 +1,12 @@
 #include <iostream>
 
+// static: Many use-cased, thats not good!
+// local variables
+// global variables
+// static function
+// member variables of a class
+// member functions of a class
+
 namespace
 {
 std::uint64_t faculty(const std::uint8_t n)
