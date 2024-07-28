@@ -1,6 +1,8 @@
 #include <iostream>
 
-namespace MyStd
+namespace DB
+{
+namespace Types
 {
 enum class Status
 {
@@ -15,18 +17,25 @@ struct User
     Status status;
     std::uint64_t id;
 };
-} // namespace MyStd
+} // namespace Types
+
+namespace Methods
+{
+void printUserStatus(DB::Types::User user)
+{
+    std::cout << (std::int32_t)user.status << '\n';
+    std::cout << static_cast<std::int32_t>(user.status) << '\n';
+}
+} // namespace Methods
+} // namespace DB
 
 int main()
 {
     // User user1 = {Status::Connected, 42U};
-    MyStd::User user1 = {.status = MyStd::Status::Connected,
-                         .id = 42U}; // C++20
+    DB::Types::User user1 = {.status = DB::Types::Status::Connected,
+                             .id = 42U}; // C++20
 
-    std::cout << user1.id << '\n';
-
-    std::cout << (std::int32_t)user1.status << '\n';
-    std::cout << static_cast<std::int32_t>(user1.status) << '\n';
+    DB::Methods::printUserStatus(user1);
 
     return 0;
 }
