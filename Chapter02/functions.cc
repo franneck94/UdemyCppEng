@@ -1,16 +1,18 @@
 #include <cstdint>
 #include <iostream>
 
-void printer(std::int32_t value);
+// function declaration
+void my_print_function();
 
 int main()
 {
-    printer(42);
+    my_print_function(); // function call
 
     return 0;
 }
 
-void printer(std::int32_t value)
+// function definiton
+void my_print_function()
 {
-    std::cout << value << '\n';
+    std::cout << "Hello World!\n";
 }

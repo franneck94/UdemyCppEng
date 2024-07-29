@@ -6,38 +6,40 @@
 
 // void print_container(const std::vector<std::int32_t> &vec)
 // {
-//     for (const auto val : vec)
+//     for (const auto value : vec)
 //     {
-//         std::cout << val << '\n';
+//         std::cout << value << '\n';
 //     }
 // }
 
-// template <std::size_t N>
+// template<std::uint32_t N>
 // void print_container(const std::array<std::int32_t, N> &arr)
 // {
-//     for (const auto val : arr)
+//     for (const auto value : arr)
 //     {
-//         std::cout << val << '\n';
+//         std::cout << value << '\n';
 //     }
 // }
 
-void print_container(std::span<std::int32_t> span)
+void print_span(std::span<std::int32_t> span)
 {
-    for (const auto val : span)
+    for (const auto value : span)
     {
-        std::cout << val << '\n';
+        std::cout << value << '\n';
     }
 }
 
+// class span:
+// length/size of that contig. memory
+// ptr to first element
+
 int main()
 {
-    std::int32_t my_c_arr[] = {1, 2, 3, 4, 5};
-    auto my_vec = std::vector<std::int32_t>{1, 2, 3, 4, 5};
-    auto my_arr = std::array<std::int32_t, 5U>{1, 2, 3, 4, 5};
+    auto vec = std::vector<std::int32_t>{1, 2, 3};
+    print_span(vec);
 
-    print_container(my_vec);
-    print_container(my_arr);
-    print_container(my_c_arr);
+    auto arr = std::array<std::int32_t, 3>{1, 2, 3};
+    print_span(arr);
 
     return 0;
 }
