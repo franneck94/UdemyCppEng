@@ -22,14 +22,17 @@ void print_container(std::span<T> span)
     {
         std::cout << val << '\n';
     }
+    std::cout << '\n';
 }
 
 int main()
 {
-    auto my_vec = std::vector<std::int32_t>{1, 2, 3, 4, 5};
+    auto my_bytes = ByteVector2{1, 0, 0, 1};
+    auto my_vec = VecOfIntegers<std::int32_t>{1, 2, 3, 4, 5};
     auto my_arr = std::array<std::uint16_t, 5U>{1, 2, 3, 4, 5};
     std::uint64_t my_c_arr[] = {1, 2, 3, 4, 5};
 
+    print_container<std::int8_t>(my_bytes);
     print_container<std::int32_t>(my_vec);
     print_container<std::uint16_t>(my_arr);
     print_container<std::uint64_t>(my_c_arr);

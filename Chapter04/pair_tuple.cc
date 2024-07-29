@@ -10,6 +10,7 @@ struct DataBlaBla
     float j;
 };
 
+// better than the return struct alternative from below
 std::tuple<std::int32_t, std::string, float> some_functions(
     const std::int32_t input)
 {
@@ -18,6 +19,7 @@ std::tuple<std::int32_t, std::string, float> some_functions(
                            static_cast<float>(input + 3));
 }
 
+// only makes sense if the struct is used more than for this return type
 DataBlaBla some_functions2(const std::int32_t input)
 {
     return DataBlaBla{input + 1, static_cast<float>(input + 3)};

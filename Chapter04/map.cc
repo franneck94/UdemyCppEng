@@ -16,11 +16,13 @@ int main()
 {
     auto my_map = std::map<std::string, std::int32_t>{{"Jan", 28}};
 
+    // if key does not exist, it will be added
     my_map["Sam"] = 40;
     my_map["Veronika"] = 24;
 
     print_map(my_map);
 
+    // if key does exist, it will be overriden
     my_map["Veronika"] = 25;
 
     print_map(my_map);

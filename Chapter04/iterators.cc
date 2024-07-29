@@ -5,6 +5,7 @@
 template <typename T>
 void print_vector(const std::vector<T> &vec)
 {
+    std::cout << "Printing vectors values:\n";
     for (const auto v : vec)
     {
         std::cout << v << '\n';
@@ -55,17 +56,17 @@ int main()
     // }
 
     auto vec_it = my_vector.begin(); // point ot index 0
-    std::advance(vec_it, 2); // it += 2;
+    std::advance(vec_it, 2);         // it += 2;
     std::cout << "Vector[2] = " << *vec_it << '\n';
 
     auto dist1 = std::distance(vec_it, my_vector.end());
     auto dist2 = std::distance(my_vector.begin(), vec_it);
-    std::cout << dist1 << " " << dist2 << '\n';
+    std::cout << "Dist1: " << dist1 << " Dist2: " << dist2 << '\n';
 
     auto prev = std::prev(vec_it);
-    std::cout << *prev << '\n';
+    std::cout << "Prev Value: " << *prev << '\n';
     auto next = std::next(vec_it);
-    std::cout << *next << '\n';
+    std::cout << "Next Value: " << *next << '\n';
 
     return 0;
 }
