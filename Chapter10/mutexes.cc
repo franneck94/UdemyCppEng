@@ -1,13 +1,16 @@
 #include <array>
+#include <cassert>
 #include <cstdint>
 #include <iostream>
 #include <mutex>
 #include <numeric>
 #include <thread>
-#include <cassert>
 
-constexpr static auto NUM_THREADS = std::uint32_t{20};
-constexpr static auto NUM_INCREMENTS = std::uint32_t{100'000};
+namespace
+{
+constexpr auto NUM_THREADS = std::uint32_t{20U};
+constexpr auto NUM_INCREMENTS = std::uint32_t{100'000U};
+}; // namespace
 
 auto global_counter = std::int32_t{0};
 

@@ -5,7 +5,10 @@
 #include <thread>
 #include <chrono>
 
-constexpr static auto NUM_THREADS = std::uint32_t{3};
+namespace
+{
+constexpr auto NUM_THREADS = size_t{3U};
+};
 
 void worker(const std::int32_t input, std::int32_t &output)
 {
