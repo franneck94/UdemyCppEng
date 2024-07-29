@@ -4,7 +4,10 @@
 #include <random>
 #include <vector>
 
-constexpr static auto NUM_ELEMENTS = size_t{3U};
+namespace
+{
+constexpr auto NUM_ELEMENTS = size_t{3U};
+};
 
 std::int32_t gen()
 {
