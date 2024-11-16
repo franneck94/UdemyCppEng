@@ -12,10 +12,10 @@ void print_array_values1(const std::uint32_t *my_array, const std::uint32_t len)
 }
 
 // c++-style arrays
-template <std::uint32_t N>
+template <std::size_t N>
 void print_array_values2(const std::array<std::uint32_t, N> my_array)
 {
-    for (std::uint32_t i = 0; i < my_array.size(); i++)
+    for (std::size_t i = 0; i < my_array.size(); i++)
     {
         std::cout << my_array[i] << "\n";
     }
