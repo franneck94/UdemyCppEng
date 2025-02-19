@@ -30,8 +30,8 @@ int main()
     auto s1 = std::string{"Jann"};
     auto s2 = std::string{"Jan"};
     std::cout << "s1 == s2: " << std::boolalpha << (s1 == s2) << '\n';
-    const auto comapared = s1.compare(s2);
-    std::cout << "s1.comapre(s2): " << comapared << '\n';
+    const auto compared = s1.compare(s2);
+    std::cout << "s1.compare(s2): " << compared << '\n';
 
     const auto search_str = "nn";
     const auto idx = s1.find(search_str);
